@@ -53,14 +53,8 @@ static inline struct RK_result_t rungeKutta(double x, double psi, double psi_p, 
 // no error checking because speed
 int main(int argc, char* argv[]){
     int L = 10;
-    double dx = .001;
-    int n_steps = L/dx;
-    // using atoi despite no way to catch error (because speed)
-    // if (argc == 3){
-    //     L = atoi(argv[1]);
-    //     n_steps = atoi(argv[2]);
-    //     dx = L/(double)n_steps;
-    // }
+    int n_steps = atoi(argv[1]);
+    double dx = L/(double)n_steps;
     
     // assert(L <= 10 && (dx < L && dx > 0) && (n_steps <= 349432)); // Comment out for speed
 

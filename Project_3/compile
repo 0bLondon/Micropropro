@@ -5,3 +5,9 @@ gcc -o O1_tise -Wall -Wextra -O1 tise.c
 gcc -o O2_tise -Wall -Wextra -O2 tise.c 
 gcc -o O3_tise -Wall -Wextra -O3 tise.c 
 gcc -o Ofast_tise -Wall -Wextra -Ofast tise.c 
+
+gcc -o opt_tise -Wall -Wextra opt_tise.c 
+gcc -o O1_opt_tise -Wall -Wextra -O1 opt_tise.c 
+gcc -o O2__opt_tise -Wall -Wextra -O2 opt_tise.c 
+gcc -o O3_opt_tise -Wall -Wextra -O3 opt_tise.c 
+gcc -o Ofast_opt_tise -Wall -Wextra -Ofast opt_tise.c

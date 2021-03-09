@@ -10,10 +10,6 @@ struct RK_result_t {
     double psi_p;
 } RK_result_t;
 
-const int L = 10;
-const double dx = .001;
-const int n_steps = L/dx;
-
 void linspace(double start, double end, double n_steps, double *buff){
     double step = (end - start)/n_steps;
     buff[0] = start;
@@ -66,7 +62,11 @@ struct RK_result_t rungeKutta(double x, double psi, double psi_p, double dx,
     return rk;
 }
 
-int main(){
+int main(int argc, char *argv[]){
+    int L = 10;
+    int n_steps = atoi(argv[1]);
+    double dx = L/(double)n_steps;
+    
     double x[n_steps];
     linspace(0,L,n_steps,x);
     
