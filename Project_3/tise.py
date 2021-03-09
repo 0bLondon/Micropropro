@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-import matplotlib.pyplot as plt
 import numpy as np
 import time
-
+import sys
 import warnings
 
+
+
 L = 10
-dx = .001
-n_steps = int(L/dx)
+n_steps = int(sys.argv[1])
+dx = L/n_steps
 x = np.linspace(0,L,n_steps)
 
 # semi-infinite triangular potential
