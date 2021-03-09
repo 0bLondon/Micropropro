@@ -92,5 +92,4 @@ int main(){
             psi_p[j] = ppp.psi_p;
         }
     }
-    
 }
