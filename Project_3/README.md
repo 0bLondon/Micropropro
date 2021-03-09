@@ -24,20 +24,20 @@ To clean up these executables run the provided `clean` script (NOTE: this will d
 ### Python 3:
 The package `numpy` is required.
 
-tise.py can be run as an executable with `./tise.py <steps>` and therefore is also a valid executable to be provided to the `timer` script.
+`tise.py` can be run as an executable with `./tise.py <steps>` and therefore is also a valid executable to be provided to the `timer` script.
 
 ---
 
 ## Comparison:
 NOTE: All timing done on a Rasberry Pi 4
 
-The time it takes to run the original python version (tise.py) with steps = 100000 is ~2.7 seconds. The unoptimized `plain_tise` executable (unoptimized `tise.c`) on the same input runs in ~0.12s. This is around a 22x faster.
+The time it takes to run the original python version (`tise.py`) with steps = 100000 is ~2.7 seconds. The unoptimized `plain_tise` executable (unoptimized `tise.c`) on the same input runs in ~0.12s. This is around a 22x faster.
 
 Further optimization was done to create `opt_tise.c`. The non-compiler optimized version (`opt_tise`) can run on the same input in ~0.08s. This is a further increase in speed to about 33x faster than the original. 
 
 The best run recorded was on the optimized code copiled with -O3. This `O3_opt_tise` exectuable ran in ~0.0041s. This is approximately 660x faster than the original and 20x faster than the version that was not optimized by the compiler. 
 
-All of the C executables where compared using different step inputs and the results were plotted. (See timer.py for implementation)
+All of the C executables where compared using different step inputs and the results were plotted. (See `timer.py` for implementation)
 
 Based on the results shown below, it appears that by using the compiler optimizations, we can get significantly better times than any manual optimizations done.
 
