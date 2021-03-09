@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+
+begin=$(gdate +%s.%N); repeat 100 { ./$1 $2 $3}; end=$(gdate +%s.%N); echo "scale=6; ($end - $begin)/100" | bc
