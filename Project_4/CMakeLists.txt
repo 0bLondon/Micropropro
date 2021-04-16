@@ -14,5 +14,5 @@ pico_sdk_init()
 
 include(auto_set_url.cmake)
 
-add_subdirectory(hash)
+add_subdirectory(random_out)
 
